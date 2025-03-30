@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm Web - với tụi mình nha</title>
+    <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" name="description">
+    <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" property="og:title">
+    <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" property="og:description">
+    <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" property="twitter:title">
+    <meta content="Tụi mình làm web đẹp | Landing Page | Digital Portfolio | Crypto Projects | Side Projects" property="twitter:description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800&amp;subset=cyrillic" rel="stylesheet">
+    
+
+    <!-- FONT -->
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Anta&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Anta&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.21/bundled/lenis.min.js"></script>
+
+
+    <script type="text/javascript" src="main.js"></script>
+   
+</head>
+
+
+
+
+<body>
+  <nav class="custom-navbar">
+    <!-- Text: Lam -->
+     
+    <span class="nav-text">LÀM WEB</span>
+  
+    <!-- Button: Du An -->
+    <button class="nav-button">DỰ ÁN</button>
+  
+    <!-- Text: Web -->
+    <a href="/aboutpdf.html" target="_blank" class="nav-text">Credential</a>
+
+  
+    <!-- Instagram Group -->
+
+    <a href="https://ig.me/m/tuilamweb" target="_blank" class="instagram-group">
+      <img src="inslogo.png" alt="Instagram Logo" class="instagram-logo" />
+      <img src="nhantin.png" alt="Overlay Icon" class="instagram-overlay" />
+    </a>
+    
+  
+  </nav>
+    <section class="pdf-section">
+
+        <div class="pdf-container">
+          <iframe src="/CREDENTIALS_LAMWEB.pdf#zoom=120" frameborder="0"></iframe>
+        </div>
+      </section>
+
+   <script type="text/javascript" src="game.js"></script>
+<script>
+
+function playVideo() {
+    const thumbnail = document.querySelector('.video-thumbnail');
+    const iframe = document.querySelector('.video-frame');
+    thumbnail.style.display = 'none';
+    iframe.style.display = 'block';
+    iframe.src += "&autoplay=1"; // Ensures the video starts playing automatically
+}
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+      // Get the text elements
+      const text1 = document.getElementById('text1');
+      const text2 = document.getElementById('text2');
+      const text3 = document.getElementById('text3');
+      // Get the image elements
+      const img1 = document.getElementById('img1');
+      const img2 = document.getElementById('img2');
+      const img3 = document.getElementById('img3');
+
+      // Set up mouseover event for text1
+      if (text1) {
+          text1.addEventListener('mouseover', function() {
+            console.log(1)
+              img1.style.display = 'block'; // Show img1
+              img2.style.display = 'none';  // Hide img2
+              img3.style.display = 'none';  // Hide img3
+              console.log(img1.style.display)
+          });
+      }
+
+      // Set up mouseover event for text2
+      if (text2) {
+        console.log(2)
+          text2.addEventListener('mouseover', function() {
+              img1.style.display = 'none';   // Hide img1
+              img2.style.display = 'block';  // Show img2
+              img3.style.display = 'none';   // Hide img3
+              console.log(img1.style.display)
+          });
+      }
+
+      // Set up mouseover event for text3
+      if (text3) {
+        console.log(3)
+          text3.addEventListener('mouseover', function() {
+              img1.style.display = 'none';   // Hide img1
+              img2.style.display = 'none';   // Hide img2
+              img3.style.display = 'block';  // Show img3
+          });
+      }
+  });
+
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+</script>
+
+
+
+    
+   <!-- New Form Section -->
+<section id="form" class="form-section">
+  <h2 class="form-title" >@LAMWEB.AGENCY</h2>
+  <h2 class="form-title" >2025</h2>
+
+<!--Waves Container-->
+</section>
+
+
+
+</body>
+</html>
+
+

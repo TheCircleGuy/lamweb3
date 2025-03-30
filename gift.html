@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="memgame.css">
+  </head>
+  <body>
+    <div class="game-container">
+       
+       
+
+
+            <div class="game-over-content">
+                <h3>Bạn chơi game cũng xịn á </h3>
+                <h4>🎉🎉🎉🎉🎉🎉</h4>
+                <h2>Có quà cho bạn nè</h2>
+                <h3>Mã giám giá</h3>
+                <button contenteditable="true">bạn xinh đẹp nhất noel này</button>
+                
+                <p id="clipboard-message" style="display:none;">Đã copy mã giảm giá</p>
+                <p>Bạn làm mấy bước sau đây để nhận quà nèk:</p>
+                <p>B1. Comment lên bài thread, viết gì dễ thương nha</p>
+                <p>B2. Bạn cop chiếc mã promo</p>
+                <p>B3. DM tụi mình</p>
+                <a href="https://www.instagram.com/tuilamweb/" target="_blank">
+                    <img class="feature-pricing-button" src="inslogo.png" alt="Instagram Logo">
+                </a>
+                
+                 
+            </div>
+          
+     
+        
+    </div>
+    <script>// Select the button and the message paragraph
+        const button = document.querySelector('button[contenteditable="true"]');
+        const messageParagraph = document.getElementById('clipboard-message');
+        
+        // Function to copy content to clipboard
+        function copyToClipboard() {
+            // Create a temporary input element to copy content from the button
+            const tempInput = document.createElement('input');
+            tempInput.value = button.textContent.trim();  // Get the content of the button
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');  // Copy the text to clipboard
+            document.body.removeChild(tempInput);  // Clean up the temporary input
+        
+            // Show the message
+            messageParagraph.style.display = 'block';
+            setTimeout(() => {
+                messageParagraph.style.display = 'none';  // Hide the message after 2 seconds
+            }, 2000);
+        }
+        
+        // Add event listener to the button
+        button.addEventListener('click', copyToClipboard);
+         </script>
+    <script src="game.js"></script>
+</body>
+</html>

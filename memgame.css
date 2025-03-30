@@ -1,0 +1,575 @@
+@font-face {
+    font-family: 'DFVNConstructioGrotesk'; /* Define a name for the font */
+    src: url('/DFVN\ Constructio\ Grotesk.ttf') format('truetype'); /* Specify the font file path and format */
+    font-weight: normal; /* Optional: specify font weight */
+    font-style: normal;  /* Optional: specify font style */
+  }
+  
+.custom-navbar {
+    width: 35%; /* Navbar width remains 35% */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #CDFF3C;
+    border-radius: 100px;
+    max-height: 4rem;
+    z-index: 1000;
+    position: fixed; /* Fixed positioning */
+    top: 0; /* Sticks to the top */
+    left: 50%; /* Centers horizontally */
+    transform: translateX(-50%); /* Adjusts to the center */
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .custom-navbar {
+      width: 50%; /* Increase the width to 50% for devices narrower than 1024px */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .custom-navbar {
+      display: none; /* Hide navbar on devices narrower than 768px */
+    }
+  }
+  
+  /* Text styling */
+  .nav-text {
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
+    font-size: 1.5rem;
+    color: #13533E; /* Color for text */
+  }
+  
+  /* Button styling */
+  .nav-button {
+    padding: 0.5rem 1.5rem;
+    background-color: #13533E; /* Background color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Rounded corners for the button */
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
+  }
+  
+  .nav-button:hover {
+    background-color: #0A3324; /* Darker green on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  /* Instagram Group */
+  .instagram-group {
+    position: sticky;
+    width: 80px; /* Fixed width for the Instagram icon */
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .instagram-logo, .instagram-overlay {
+    margin-left: 0.3rem;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  .instagram-overlay {
+    transition: transform 0.3s ease; /* Smooth rotation effect on hover */
+  }
+  
+  .instagram-group:hover .instagram-overlay {
+    transform: rotate(20deg); /* Rotate overlay icon on hover */
+  }
+  
+  
+  .cta-button-primary-menu, .cta-button-secondary {
+      padding: 15px 30px;
+      font-size: 24px;
+      border-radius: 55px;
+    font-family: 'DFVNConstructioGrotesk', sans-serif;
+      cursor: pointer;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+  }
+  
+  .cta-button-primary-menu {
+      background-color: #ffffff;
+      color: #fff;
+  }
+  
+  .cta-button-primary-menu:hover {
+      background-color: #b5ffe8;
+  }
+  .nav-list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+  }
+  
+  .nav-list li {
+      margin: 0 1rem;
+  }
+  
+  .nav-list a {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+  
+  .nav-list a:hover {
+      color: green;
+  }
+  
+  .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+  }
+  
+  .bar {
+      height: 4px;
+      width: 25px;
+      background-color: white;
+      margin: 2px 0;
+  }
+  
+  @media (max-width: 768px) {
+      .custom-navbar {
+        display: none;
+      }
+    }
+    
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+      .nav-list {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          background-color: #333;
+          position: absolute;
+          top: 60px;
+          left: 0;
+      }
+  
+      .nav-list.active {
+          display: flex;
+      }
+  
+      .menu-toggle {
+          display: flex;
+      }
+  }
+  
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('bg.png');
+
+    font-family: "Montserrat", serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.almosthidden{
+    color: black;
+    font-size: 12px;
+}
+.feature-pricing-button {
+    background-color: #CDFF3C;
+    color: #333;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, top 0.3s ease;
+    /* text-decoration: none; */
+  }
+  
+  .feature-pricing-button:hover {
+    background-color: #CDFF3C;
+    transform: scale(1.2) rotate(20deg); /* Default scale */
+    transition: transform 0.3s ease, top 0.3s ease;
+  }
+.game-container {
+    width: 100%;
+    max-width: 500px;
+}
+.btn-margin{
+    margin-top: 25px;
+}/* Game Header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.moves, .timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.moves-count, .time {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #CDFF3C, #DAFF9C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #CDFF3C;
+    margin-top: 0.2rem;
+}
+
+.restart-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.8rem;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Game Board */
+/* Default grid for larger screens */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 columns */
+    gap: 1rem;
+    perspective: 1000px;
+}
+
+/* Adjust the number of columns on smaller screens */
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    }
+}
+
+
+.card {
+    position: relative;
+    aspect-ratio: 3/4;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s ease;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    animation: matched 0.6s ease forwards;
+}
+
+@keyframes matched {
+    0% {
+        transform: rotateY(180deg) scale(1);
+    }
+    50% {
+        transform: rotateY(180deg) scale(1.1);
+    }
+    100% {
+        transform: rotateY(180deg) scale(1);
+    }
+}
+
+.card-front, .card-back {
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    font-size: 2rem;
+    background: linear-gradient(45deg, #bdfaec, #DAFF9C);
+}
+
+.card-back {
+    background: linear-gradient(45deg, #CDFF3C, #DAFF9C);
+}
+
+.card:hover .card-back::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+    border-radius: 1rem;
+    opacity: 1;
+}
+
+/* Game Over Screen */
+.game-over {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}
+
+.game-over.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.game-over-content {
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.game-over h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stats-final {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.stats-final .value {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.play-again-btn {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #60a5fa, #a78bfa);
+    border: none;
+    border-radius: 0.8rem;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.play-again-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .game-board {
+        grid-template-columns: repeat(4, 1fr);  /* 4 cards per row */
+        gap: 0.8rem;  /* Reduced gap */
+    }
+
+    .card {
+        aspect-ratio: 2/3; /* Smaller cards */
+    }
+
+    .game-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .stats {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+        gap: 0.8rem; /* Reduced gap */
+    }
+
+    .card {
+        aspect-ratio: 1/1.5; /* Even smaller cards */
+    }
+
+    .game-header {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .moves-count, .time {
+        font-size: 1.3rem;
+    }
+
+    .moves, .timer {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .restart-btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-board {
+        grid-template-columns: repeat(6, 1fr); /* 6 cards per row */
+        gap: 0.6rem; /* Further reduced gap */
+    }
+
+    .card {
+        aspect-ratio: 1/1.5; /* Smallest cards */
+    }
+
+    .game-header {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .moves-count, .time {
+        font-size: 1.2rem;
+    }
+
+    .moves, .timer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restart-btn {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .play-again-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .game-over-content {
+        padding: 1.5rem;
+    }
+
+    .stats-final .value {
+        font-size: 1.5rem;
+    }
+
+    .game-over h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Styling buttons */
+button {
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 1.3rem 2.6rem;
+    background: honeydew;
+    border: 6px #BBDBD1;
+    border-style: dashed solid;
+    color: #093824;
+    transition: 200ms;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+button:hover {
+    filter: brightness(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0px 30px 200px rgba(255, 255, 255, 0.7);
+}
+
+button:focus {
+    outline: 4px solid salmon;
+}
+
+button:active {
+    transform: skew(-2deg) rotate(2deg);
+}
+.feature-pricing-button {
+    background-color: #CDFF3C;
+    color: #333;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, top 0.3s ease;
+    /* text-decoration: none; */
+    margin-top: 25px;
+  }
+span {
+    position: absolute;
+    top: 80vh;
+    margin: 2rem 0;
+    font-size: 1.7rem;
+    color: #f5f4ee;
+}

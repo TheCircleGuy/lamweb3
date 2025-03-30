@@ -1,0 +1,51 @@
+
+<h2 class="section-title">Why Smarty?</h2> <!-- Centered Title -->
+<section class="symmetrical-section">
+ 
+  <div class="left-half">
+    <h3 class="left-subtitle">Industry Challenges</h3>
+    <!-- <p class="text-point2">Find buyers, close deals, and watch your business grow with Apollo's end-to-end sales solution, powered by AI.</p> -->
+    <div class="text-box">
+        <div class="text-item">
+            <!-- <h4 class="text-title">Hard to deliver a 5-star experience.</h4> -->
+          
+            <p class="text-point"><img src="!.png" alt="issue icon" class="issue-icon">Managers are stretched thin, and hiring more is costly.</p>
+            <p class="text-point"><img src="!.png" alt="issue icon" class="issue-icon">It's tough to pinpoint problems and causes on bad days.</p>
+            <p class="text-point"><img src="!.png" alt="issue icon" class="issue-icon">Hard to deliver a 5-star experience.</p>
+        </div>
+    </div>
+</div>
+
+
+  <div class="right-half">
+      <h3 class="right-subtitle">Smarty Has The Answers: </h3>
+      <div class="boxes-container">
+          <div class="info-box">
+              <h4>📋 Reviews Analysis</h4>
+              <p>SMARTY collects and analyzes real-time customer feedback across channels.
+              </p>
+            
+          </div>
+
+          <div class="info-box">
+            
+              <h4>🤖 Artificial Intelligence</h4>
+              <p> SMARTY leverages AI to deliver actionable insights to your team.
+              </p>
+          </div>
+
+          <div class="info-box">
+            <h4>🎮 Gamification</h4>
+            <p> SMARTY gamifies performance by linking feedback to staff, motivating & holding them accountable.</p>
+            
+          </div>
+
+          <div class="info-box">
+              <h4>🚀Boost Sales</h4>
+              <p>SMARTY saves time, drives staff performance, and enhances your brand.
+              </p>
+            
+          </div>    
+      </div>
+  </div>
+</section>

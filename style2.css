@@ -2912,6 +2912,23 @@ figure {
   font-family: 'DFVNConstructioGrotesk';
 }
 
+.tag2 {
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: #CDFF3C;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  font-family: 'DFVNConstructioGrotesk';
+}
+
+.tag2:hover {
+  background-color: #b8e633;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
 
 .browser {
   width: 900px; /* Keep small screen */
@@ -2988,4 +3005,102 @@ figure {
   border: none;
   border-radius: 15px;
 
+}
+
+/*-------- PRELOADER PING PONG */
+
+
+#preloader {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg);
+	z-index: 9999;
+}
+
+$linear: linear;
+$easeIn: cubic-bezier(0.32,0,0.67,0);
+$easeOut: cubic-bezier(0.33,1,0.68,1);
+
+.ping-pong {
+	display: block;
+	margin: auto;
+	width: 8em;
+	height: 8em;
+
+	&__ball,
+	&__paddle {
+		&-x,
+		&-y {
+			animation: ping-pong-ball-x 1.5s $linear infinite;
+		}
+	}
+	&__ball {
+		&-y {
+			animation-name: ping-pong-ball-y;
+		}
+	}
+	&__paddle {
+		&-x {
+			animation-name: ping-pong-paddle-x;
+			animation-timing-function: $easeOut;
+		}
+		&-y {
+			animation-name: ping-pong-paddle-y;
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),90%,10%);
+		--fg: hsl(var(--hue),90%,90%);
+	}
+}
+
+@keyframes ping-pong-ball-x {
+	from,
+	to {
+		transform: translate(40px,80px);
+	}
+	50% {
+		transform: translate(88px,80px);
+	}
+}
+@keyframes ping-pong-ball-y {
+	from,
+	50%,
+	to {
+		animation-timing-function: $easeOut;
+		transform: translate(0,0);
+	}
+	25%,
+	75% {
+		animation-timing-function: $easeIn;
+		transform: translate(0,-68px);
+	}
+}
+@keyframes ping-pong-paddle-x {
+	from,
+	to {
+		transform: translate(36px,92px) rotate(6deg);
+	}
+	50% {
+		transform: translate(92px,92px) rotate(-6deg);
+	}
+}
+@keyframes ping-pong-paddle-y {
+	from,
+	50%,
+	to {
+		animation-timing-function: $easeOut;
+		transform: translate(0,0);
+	}
+	25%,
+	75% {
+		animation-timing-function: $easeIn;
+		transform: translate(0,28px);
+	}
 }
